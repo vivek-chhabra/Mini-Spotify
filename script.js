@@ -97,24 +97,45 @@ function secodnToMinute(seconds) {
 // ======================================================================
 
 // event listener for playing song
+let position = 1;
 for (let i = 0; i < play.length; i++) {
-    play[i].addEventListener('click', (e) => {
+
+    // hover effect when hovered on any song
+    songs[i].addEventListener('mouseenter', () => {
+        songs[i].classList.add('s-hover')
+    })
+    songs[i].addEventListener('mouseleave', () => {
+        songs[i].classList.remove('s-hover')
+    })
+
+    // playing song when clicked on any song container
+    songs[i].addEventListener('click', (e) => {
         try {
             pauseAudio(songIndex)
         }
         catch (err) {
             console.log(err)
         }
-        playAudio(i)
+        if(position == 1) {
+            playAudio(i)
+            position = 0;
+        } else {
+            pauseAudio(i)
+            position = 1;
+        }
+        if(i != songIndex) {
+            playAudio(i)
+            position = 10
+        }
     })
 }
 
 // event listener for pausing the song
-for (let i = 0; i < pauseBtn.length; i++) {
-    pauseBtn[i].addEventListener('click', () => {
-        pauseAudio(i)
-    })
-}
+// for (let i = 0; i < pauseBtn.length; i++) {
+//     pauseBtn[i].addEventListener('click', () => {
+//         pauseAudio(i)
+//     })
+// }
 
 // footer play amd pause button
 

@@ -125,6 +125,19 @@ li {
     color: black;
 }
 
+.song:hover {
+    cursor: pointer;
+}
+
+.s-hover:hover p{
+    color: rgb(22, 125, 58);
+}
+
+.s-hover:hover .fa-play {
+    color: rgb(22, 125, 58);
+    border: 2px solid rgb(22, 125, 58);
+}
+
 .content {
     padding-inline: 40px;
     width: 100%;
