@@ -130,13 +130,6 @@ for (let i = 0; i < play.length; i++) {
     })
 }
 
-// event listener for pausing the song
-// for (let i = 0; i < pauseBtn.length; i++) {
-//     pauseBtn[i].addEventListener('click', () => {
-//         pauseAudio(i)
-//     })
-// }
-
 // footer play amd pause button
 
 footerPlay.addEventListener('click', () => {
