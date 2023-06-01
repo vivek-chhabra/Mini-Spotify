@@ -4,6 +4,10 @@
 
 <br>
 
+> [Run This Project](https://vivek-chhabra.github.io/Mini-Spotify/)
+
+<br>
+
 ## ▶️ Play and Pause
 
 To play or pause a song, simply click on the respective song. This will toggle the play and pause button, allowing you to control the playback of the song.
